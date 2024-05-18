@@ -24,7 +24,6 @@ cmp.setup({
 })
 
 lsp_zero.on_attach(function(client, bufnr)
-	print("help")
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
