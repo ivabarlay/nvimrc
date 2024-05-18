@@ -3,24 +3,22 @@ lsp_zero.preset("recommended")
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+require('lsp-zero.cmp').extend()
 
 cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
-	mapping = cmp.mapping.preset.insert({
-		['<C-Space>'] = cmp.mapping.complete(),
+	mapping = {
+        ["<C-Space>"] = cmp.mapping(cmp.mapping.complete({
+            reason = cmp.ContextReason.Auto,
+        }), {"i", "c"}),
 		['<C-n>'] = cmp_action.luasnip_jump_forward(),
 		['<C-p>'] = cmp_action.luasnip_jump_backward(),
 		['<C-y>'] = cmp.mapping.confirm({select = true}),
-	}),
-	snippet = {
-		expand = function(args)
-			require('luasnip').lsp_expand(args.body)
-		end,
-	},
-	sources = {
+    },
+		sources = {
 		{name = 'nvim_lsp'}
 	}
 })
