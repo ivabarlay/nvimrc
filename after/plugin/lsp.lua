@@ -16,7 +16,7 @@ cmp.setup({
         }), {"i", "c"}),
 		['<C-n>'] = cmp_action.luasnip_jump_forward(),
 		['<C-p>'] = cmp_action.luasnip_jump_backward(),
-		['<C-l>'] = cmp.mapping.confirm({select = true}),
+		['<C-y>'] = cmp.mapping.confirm({select = true}),
     },
     snippet = {
         expand = function(args)
