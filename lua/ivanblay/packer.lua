@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
   }
 }
 
+
 use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -51,6 +52,7 @@ use {
 }
 
 -- Lua
+
 use {
   'abecodes/tabout.nvim',
   config = function()
@@ -78,5 +80,7 @@ use {
 	wants = {'nvim-treesitter'}, -- (optional) or require if not used so far
 	after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
 }
+
+use 'karb94/neoscroll.nvim'
 
 end)
