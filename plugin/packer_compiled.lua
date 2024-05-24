@@ -122,6 +122,12 @@ _G.packer_plugins = {
     path = "/home/ivanblay/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-rooter.lua"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16nvim-rooter\frequire\0" },
+    loaded = true,
+    path = "/home/ivanblay/.local/share/nvim/site/pack/packer/start/nvim-rooter.lua",
+    url = "https://github.com/notjedi/nvim-rooter.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/ivanblay/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -149,7 +155,7 @@ _G.packer_plugins = {
     url = "https://github.com/rose-pine/neovim"
   },
   ["tabout.nvim"] = {
-    config = { "\27LJ\2\n§\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\topen\6{\nclose\6}\1\0\2\topen\6[\nclose\6]\1\0\2\topen\6(\nclose\6)\1\0\2\topen\6`\nclose\6`\1\0\2\topen\6\"\nclose\6\"\1\0\2\topen\6'\nclose\6'\1\0\v\ftabouts\0\21act_as_shift_tab\1\fexclude\0\16default_tab\n<C-t>\21ignore_beginning\2\21backwards_tabkey\f<S-Tab>\15act_as_tab\2\15completion\2\21enable_backwards\2\22default_shift_tab\n<C-d>\vtabkey\n<Tab>\nsetup\vtabout\frequire\0" },
+    config = { "\27LJ\2\n§\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\v\21enable_backwards\2\15completion\2\15act_as_tab\2\fexclude\0\21backwards_tabkey\f<S-Tab>\21ignore_beginning\2\16default_tab\n<C-t>\21act_as_shift_tab\1\ftabouts\0\vtabkey\n<Tab>\22default_shift_tab\n<C-d>\nsetup\vtabout\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -179,13 +185,17 @@ time([[Defining packer_plugins]], false)
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: nvim-rooter.lua
+time([[Config for nvim-rooter.lua]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16nvim-rooter\frequire\0", "config", "nvim-rooter.lua")
+time([[Config for nvim-rooter.lua]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd tabout.nvim ]]
 
 -- Config for: tabout.nvim
-try_loadstring("\27LJ\2\n§\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\topen\6{\nclose\6}\1\0\2\topen\6[\nclose\6]\1\0\2\topen\6(\nclose\6)\1\0\2\topen\6`\nclose\6`\1\0\2\topen\6\"\nclose\6\"\1\0\2\topen\6'\nclose\6'\1\0\v\ftabouts\0\21act_as_shift_tab\1\fexclude\0\16default_tab\n<C-t>\21ignore_beginning\2\21backwards_tabkey\f<S-Tab>\15act_as_tab\2\15completion\2\21enable_backwards\2\22default_shift_tab\n<C-d>\vtabkey\n<Tab>\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
+try_loadstring("\27LJ\2\n§\3\0\0\5\0\f\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\a\0005\4\4\0>\4\1\0035\4\5\0>\4\2\0035\4\6\0>\4\3\0035\4\a\0>\4\4\0035\4\b\0>\4\5\0035\4\t\0>\4\6\3=\3\n\0024\3\0\0=\3\v\2B\0\2\1K\0\1\0\fexclude\ftabouts\1\0\2\nclose\6}\topen\6{\1\0\2\nclose\6]\topen\6[\1\0\2\nclose\6)\topen\6(\1\0\2\nclose\6`\topen\6`\1\0\2\nclose\6\"\topen\6\"\1\0\2\nclose\6'\topen\6'\1\0\v\21enable_backwards\2\15completion\2\15act_as_tab\2\fexclude\0\21backwards_tabkey\f<S-Tab>\21ignore_beginning\2\16default_tab\n<C-t>\21act_as_shift_tab\1\ftabouts\0\vtabkey\n<Tab>\22default_shift_tab\n<C-d>\nsetup\vtabout\frequire\0", "config", "tabout.nvim")
 
 time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]

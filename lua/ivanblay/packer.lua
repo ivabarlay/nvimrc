@@ -79,4 +79,10 @@ use {
 	after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
 }
 
+-- NOTE: avoid lazy loading as the autocmds may not be caught by nvim-rooter.lua.
+use {
+    'notjedi/nvim-rooter.lua',
+    config = function() require'nvim-rooter'.setup() end
+}
+
 end)
