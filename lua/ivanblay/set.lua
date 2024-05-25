@@ -17,4 +17,5 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 vim.g.mapLeader = " "
