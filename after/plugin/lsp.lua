@@ -34,8 +34,10 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
+    ensure_installed = {'jdtls'},
   handlers = {
     lsp_zero.default_setup,
+    jdtls = lsp_zero.noop,
   },
 })
 
