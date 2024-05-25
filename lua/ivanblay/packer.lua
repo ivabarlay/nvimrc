@@ -91,4 +91,16 @@ use {
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 }
 
+use {
+    'mfussenegger/nvim-jdtls'
+}
+
+use {
+    'mfussenegger/nvim-dap'
+}
+
+use {
+    'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
+}
+
 end)
