@@ -17,7 +17,7 @@ local root_files = {
 
 local features = {
   -- change this to `true` to enable codelens
-  codelens = true,
+  codelens = false,
 
   -- change this to `true` if you have `nvim-dap`,
   -- `java-test` and `java-debug-adapter` installed
