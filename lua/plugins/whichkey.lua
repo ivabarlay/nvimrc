@@ -18,7 +18,8 @@ return {
             ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
             ['<leader>J'] = { name = '[J]ava', _ = 'which_key_ignore' },
             ['<leader>t'] = { name = '[T]ab', _ = 'which_key_ignore'},
-            ['<leader>w'] = {name = '[W]indow', _ = 'which_key_ignore'}
+            ['<leader>w'] = {name = '[W]indow', _ = 'which_key_ignore'},
+            ['<leader>u'] = {name = '[U]ndo', _ = 'which_key_ignore'}
         })
     end
 }
