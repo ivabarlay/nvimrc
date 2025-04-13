@@ -12,7 +12,7 @@ return {
         config = function()
             -- ensure that we have lua language server, typescript launguage server, java language server, and java test language server are installed
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "jdtls", "clangd"},
+                ensure_installed = { "lua_ls", "jdtls", "clangd", "ts_ls"},
             })
         end
     },
@@ -48,6 +48,10 @@ return {
 
             -- setup the clangd language server
             lspconfig.clangd.setup{
+                capabilities = capabilities,
+            }
+
+            lspconfig.ts_ls.setup{
                 capabilities = capabilities,
             }
 
