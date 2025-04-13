@@ -12,8 +12,7 @@ return {
 
         -- call the treesitter setup function with properties to configure our experience
         ts_config.setup({
-            ensure_installed = {"vim", "vimdoc", "lua", "java", "javascript", "typescript", "html", "css", "json", "tsx", "markdown", "markdown_inline", "gitignore"},
-            
+            ensure_installed = {"vim", "vimdoc", "lua", "java", "javascript", "typescript", "html", "css", "json", "tsx", "markdown", "markdown_inline", "gitignore", "svelte"},
             -- make sure highlighting is enabled
             highlight = {enable = true},
             -- enable tsx auto closing tag creation
