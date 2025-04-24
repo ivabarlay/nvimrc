@@ -11,6 +11,10 @@ return {
             sources = {
                 -- setup lua formatter
                 null_ls.builtins.formatting.stylua,
+                -- setup C formatter
+                null_ls.builtins.formatting.clang_format.with({
+                    extra_args = { "-style={BasedOnStyle: llvm, IndentWidth: 4}" },
+                }),
                 -- setup eslint linter for javascript
                 require("none-ls.diagnostics.eslint_d"),
                 -- setup prettier to format languages that are not lua
