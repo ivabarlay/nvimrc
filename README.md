@@ -4,3 +4,4 @@ Installation
 2- Install nerdfonts
 3- install eslint_d and eslint
 4- use npx eslint --init
+5- Install xclip
